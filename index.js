@@ -97,7 +97,7 @@ function followingStep(choice) {
             
         case "Add an Intern":
             inquirer.prompt(generateQuestions(internQuestions)).then(answers =>{
-                teamMembers.push(new Intern(answers.name, answers.id, answers.extra));
+                teamMembers.push(new Intern(answers.name, answers.id, answers.email, answers.extra));
                 giveChoices();
             });
             break;
